@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cantina1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b50f71ad-5291-43d8-8241-195741923f14">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from venda order by dataq desc;]]>
+	</queryString>
+	<field name="id_v" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qtdp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="forma_pg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataq" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_cad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="206" height="20" uuid="526e4ca5-364a-482e-936f-789706cf42f1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="1" width="110" height="20" uuid="97479fdf-0560-4e49-b474-aa0f89743a05"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="1" width="22" height="20" uuid="9b0e0da9-f2b4-4b53-9b4a-190572781388"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qtdp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="1" width="24" height="20" uuid="732a50d9-b5ae-4499-a1bd-e94cfc66ebc9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="1" width="100" height="20" uuid="aaf2fe93-1ca5-4afa-97f9-a9d963d41671"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Forma_pg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="1" width="100" height="20" uuid="1b7df54f-085a-4fa3-8827-6b1e3943aacc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dataq]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="206" height="20" uuid="fd59565e-b089-436b-9397-29dff5aa54a9"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="110" height="20" uuid="c9c57ca5-b791-4e29-8c99-9248a23fb69b"/>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="24" height="20" uuid="d14e2bdd-9473-468e-a65d-26ded0ef5442"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="0" width="100" height="20" uuid="ac0aea3a-449d-4371-804a-8fb672994f42"/>
+				<textFieldExpression><![CDATA[$F{forma_pg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="100" height="20" uuid="4522de77-a043-4c2d-806d-245676fe674d"/>
+				<textFieldExpression><![CDATA[$F{dataq}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="22" height="20" uuid="4a7607a0-f6b3-4673-a464-ebec8f40c177"/>
+				<textFieldExpression><![CDATA[$F{qtdp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
